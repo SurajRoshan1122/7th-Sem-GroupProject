@@ -1,0 +1,116 @@
+/* Full-page background with blur */
+.next-page {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.next-page::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('/public/images/background.jpg');
+  background-size: cover;
+  background-position: center;
+  filter: blur(8px);
+  z-index: -1;
+}
+
+/* Glass effect box */
+.glass-box {
+  width: 70%;
+  max-width: 900px;
+  padding: 30px;
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.15);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  color: white;
+  text-align: center;
+}
+
+.glass-box h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+/* Inputs */
+.input-row {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.dropdown {
+  font-size: 1rem;
+}
+
+.text-box {
+  width: 100%;
+  min-height: 100px;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  resize: vertical;
+  font-size: 1rem;
+}
+
+/* Buttons */
+.submit-btn, .clear-btn {
+  padding: 12px 20px;
+  border-radius: 10px;
+  border: none;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.submit-btn {
+  background-color: #0077ff;
+  color: white;
+}
+
+.submit-btn:hover {
+  background-color: #005ecb;
+  transform: scale(1.05);
+}
+
+.clear-btn {
+  background-color: #f44336;
+  color: white;
+}
+
+.clear-btn:hover {
+  background-color: #d32f2f;
+  transform: scale(1.05);
+}
+
+/* Results */
+.results-box {
+  margin-top: 20px;
+  padding: 20px;
+  border-radius: 12px;
+  background: rgba(0, 0, 0, 0.4);
+  text-align: left;
+}
+
+.results-box h3 {
+  margin: 10px 0 5px;
+  font-size: 1.2rem;
+  color: #ffd700;
+}
+
+.results-box p {
+  margin: 0 0 10px;
+  font-size: 1rem;
+}
