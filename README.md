@@ -33,8 +33,7 @@ Follow these instructions to set up and run the project on your local machine.
 ### Prerequisites
 
 - Python 3.7+
-- `pip` for package management
-- pip for Python package management  
+- `pip` for Python package management  
 
 ### Installation
 
@@ -42,6 +41,7 @@ Follow these instructions to set up and run the project on your local machine.
    ```bash
    git clone <your-repo-url>
    cd "AI Symptom Checker"
+   ```
 2. **Create and activate a virtual environment**
    It is highly recommended to use a virtual environment to keep the project's dependencies isolated.
 
@@ -61,6 +61,21 @@ Follow these instructions to set up and run the project on your local machine.
    ```bash
    pip install -r requirements.txt
    ```
+
+   or run the following lines one by one
+   ```bash
+   pip install numpy pandas scikit-learn tensorflow
+   pip install flask flask-cors
+   pip install nltk
+   ```
+   After installing nltk run the following in python terminal(run 'python' in bash to access python terminal)
+   ```bash
+   import nltk
+   nltk.download('stopwords')
+   nltk.download('punkt')
+   ```
+   Exit python terminal with Ctrl+Z
+   
 4. **Install frontend dependencies**
    cd ../frontend
    npm install
